@@ -1,0 +1,84 @@
+body,html{
+    margin: 0;
+    font-family: arial,'微軟正黑體';
+}
+*{
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+ul,li{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.clearfix::after{
+    display: block;
+    content: '';
+    clear: both;
+}
+.container{
+    width: 100%;
+    min-width: 320px;
+    margin: auto;
+    padding: 0 10px;
+}
+@media(min-width: 540px){.container{ width: 540px; }}
+@media(min-width: 768px){.container{ width: 768px; }}
+@media(min-width: 992px){.container{ width: 992px; }}
+@media(min-width: 1200px){.container{ width: 1200px; }}
+
+.L-box{ float: left;}
+.R-box{ float: right;}
+main{
+    min-width: 320px;
+}
+/* 選單 */
+#banner{
+    width: 100%;
+    height: 180px;
+    background-image: url(../images/banner.jpg);
+    background-position: center center;
+    background-size: cover;
+}
+@media(min-width: 768px){ #banner{height: 460px} }
+#menuBox{
+    margin-top: -38px;
+    background-color: rgba(10,10,10,.7);
+}
+#menuBox ul{
+    width: 210px;
+    margin: auto;
+}
+#menuBox ul>li{
+    float: left;
+    margin: 0 10px;
+    padding: 10px;
+    color: #fff;
+    cursor: pointer;
+}
+#menuBox ul>li.active{
+    background-color: #aaa;
+}
+
+/* 內容 */
+.content{
+    width: 100%;
+    background-color: #efefef;
+}
+.content #movie{
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 0px;
+    margin-top: 5px;
+    height: 0;
+    overflow: hidden;
+}
+.content #movie iframe{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
